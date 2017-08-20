@@ -271,36 +271,7 @@ if __name__ == "__main__":
     assert(player1 == game.active_player)
 
     # get a list of the legal moves available to the active player
-    print('get_legal_moves', game.get_legal_moves())
-    print('get_opponent', game.get_opponent(player1))
-    print('get_player_location', game.get_player_location(player1))
-    print('len(get_legal_moves)', len(game.get_legal_moves()))
-    print('glm(gopp))', len(game.get_legal_moves(game.get_opponent(player2))))
-    print('width', game.width/2)
-    print('height', game.height/2)
-    print('get_location', game.get_player_location(player1))
-    print('get_loc', game.get_player_location(player2))
-    y, x = game.get_player_location(player1)
-    print('x', x, ', y=', y)
-    own_moves = len(game.get_legal_moves())
-    opp_moves = len(game.get_legal_moves(game.get_opponent(player2)))
-
-    print(((own_moves**2) - 1.5*(opp_moves**2)))
-
-    print(game.get_player_location(game.get_opponent(player1)))
-
-    opp_location = game.get_player_location(game.get_opponent(player1))
-    own_location = game.get_player_location(player1)
-    print(opp_location)
-    print(own_location)
-    print('location', float(abs(sum(opp_location) - sum(own_location))))
-
-
-
-
-
-
-
+    print(game.get_legal_moves())
 
     # get a successor of the current state by making a copy of the board and
     # applying a move. Notice that this does NOT change the calling object
